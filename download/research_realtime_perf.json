@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://openwebsolutions.in/blog/stock-market-app-development-real-time-websocket-dashboards-2025",
+    "name": "Stock Market App Development: Real-Time WebSocket Dashboards",
+    "snippet": "Stock Market App Development in 2025: build real-time WebSocket dashboards with Symfony, comply with T+1 and MiCA, boost trader ROI...",
+    "host_name": "openwebsolutions.in",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@emily19980210/optimizing-real-time-market-data-feeds-a-python-websocket-approach-for-us-stocks-f141781752fb",
+    "name": "Optimizing Real-Time Market Data Feeds: A Python WebSocket",
+    "snippet": "To visualize market depth or calculate indicators (like RSI or VWAP) in real-time, efficient memory management is crucial. Using Python's ...",
+    "host_name": "medium.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://bookmap.com/blog/the-complete-guide-to-real-time-market-data-feeds-what-traders-need-to-know-in-2025",
+    "name": "The Complete Guide to Real-Time Market Data Feeds - Bookmap",
+    "snippet": "A real-time market data feed delivers live market information directly from an exchange or aggregated through a vendor. It includes: real-time stock prices ...",
+    "host_name": "bookmap.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.quantvps.com/blog/market-data-sources-for-algorithmic-trading?srsltid=AfmBOoph71amvYJa_gMokjdlVy4ChcXiVHetWu-VDtf0bCm5DHwk_Ihn",
+    "name": "Selecting the Right Market Data Sources for Algorithmic Trading",
+    "snippet": "WebSockets are ideal for real-time data, while RESTful APIs work better for historical queries. For large-scale backtesting, flat-file formats ...",
+    "host_name": "www.quantvps.com",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://sisgain.com/blogs/fintech-ai-stock-prediction",
+    "name": "How Fintech Startups Can Build an AI-Powered Stock Market",
+    "snippet": "Learn how fintech startups build AI-powered stock market prediction platforms using machine learning, real-time data, and predictive ...",
+    "host_name": "sisgain.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://finnhub.io/docs/api/websocket-trades",
+    "name": "Websocket - Realtime streaming for US Full SIP, LSE, Forex and",
+    "snippet": "Get real-time quote data for US stocks. Constant polling is not recommended. Use websocket if you need real-time updates. Real-time stock prices for ...",
+    "host_name": "finnhub.io",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.mexc.com/news/476023",
+    "name": "The 7 Best Real-Time Stock Data APIs for Investors and Developers",
+    "snippet": "In this article, I present a practical comparison of the 7 best financial APIs on the market (with a focus on real-time stock data). I include:.",
+    "host_name": "www.mexc.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://marketxls.com/blog/real-time-market-data-providers-cost-effective-options",
+    "name": "Real Time Market Data Providers: Honest Comparison Guide for 2025",
+    "snippet": "Real time market data providers compared — Bloomberg, Refinitiv, FactSet, IEX Cloud, and MarketXLS evaluated on cost, data coverage, ...",
+    "host_name": "marketxls.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://intrinio.com/blog/building-analytics-dashboards-with-real-time-financial-data",
+    "name": "Building Analytics Dashboards with Real-Time Financial Data - Intrinio",
+    "snippet": "Learn how to build analytics dashboards with real-time financial data. Explore integration, performance, reliability, and best practices.",
+    "host_name": "intrinio.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://site.financialmodelingprep.com/education/other/best-realtime-stock-market-data-apis-in-",
+    "name": "Best Real-Time Stock Market Data APIs in 2026 | Co | FMP",
+    "snippet": "Compare the best real-time stock market data APIs in 2026 based on latency, pricing, coverage, and reliability. See how FMP, Massive, ...",
+    "host_name": "site.financialmodelingprep.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://kundliapi.com/pricing.html",
+    "name": "API Pricing — All-In-One Vedic Astrology API | KundliAPI.com",
+    "snippet": "KundliAPI.com All-in-One Vedic Astrology API. 203+ endpoints — Kundli, Matching, Dasha, Dosha, PDF Reports in 6 languages, Tarot, Numerology & more.",
+    "host_name": "kundliapi.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://astrologyapi.com/vedic-astrology",
+    "name": "Vedic Astrology API V1 – Kundli and Match Making APIs",
+    "snippet": "Get accurate and reliable Vedic astrology data with AstrologyAPI's API. From Kundli chart calculations and planetary positions to house cusps and more, ...\nOur APIs provide you with access to a range of Vedic Astrology features, including Kundli calculations, match making, panchang details, Krishnamurthy Paddhati, ...",
+    "host_name": "astrologyapi.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://classic.yarnpkg.com/en/package/vedic-astrology-api",
+    "name": "vedic-astrology-api | Yarn",
+    "snippet": "A comprehensive Node.js API for Vedic astrology calculations including Rasi, Nakshatra, Lagna, Birth Chart, Porutham compatibility, and Behavior predictions ...",
+    "host_name": "classic.yarnpkg.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://vedastro.org/blog/5-Best-Vedic-Astrology-APIs.html",
+    "name": "Best Vedic Astrology APIs 2026 | VedAstro Blog",
+    "snippet": "Honest, verified comparison of the top Vedic astrology APIs in 2026: VedAstro, VedicAstroAPI, Prokerala, Vedika, AstrologyAPI.com, RoxyAPI, and Kundli.",
+    "host_name": "vedastro.org",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/arpitasah00/vedic_astro_npm",
+    "name": "arpitasah00/vedic_astro_npm: Astrology npm library - GitHub",
+    "snippet": "Accurate Vedic astrology calculations in TypeScript: Panchang, Nakshatra, Moon Sign, Planetary Positions, Kundali, Gun Milan, and rule-based daily guidance.",
+    "host_name": "github.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://libraries.io/npm/vedic-calc",
+    "name": "vedic-calc 1.3.0 on npm - Libraries.io - Libraries.io",
+    "snippet": "Rasi Chart (D-1), Complete birth chart with all 9 planets in 12 signs ; Navamsa Chart (D-9), Divisional chart for marriage & spiritual analysis.",
+    "host_name": "libraries.io",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/opensource/comments/1q6wl29/i_built_an_open_source_astrology_api_for_people",
+    "name": "I built an open source astrology API for people to use it for  - Reddit",
+    "snippet": "The features of the project so far are: Natal Charts : Complete birth chart calculations with planets, houses, angles & aspects (Both whole and ...",
+    "host_name": "www.reddit.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.npmjs.com/package/@astro-api/n8n-nodes-astrology?activeTab=readme",
+    "name": "@astro-api/n8n-nodes-astrology - npm",
+    "snippet": "Official n8n community node for Astrology API — professional astrological calculations powered by Swiss Ephemeris. Features. Data & Calculations.",
+    "host_name": "www.npmjs.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://astrobeans.com",
+    "name": "Astrology API Services | Accurate Horoscope & Kundli Data",
+    "snippet": "Access real-time astrology data with our powerful Astrology API. Generate horoscopes, Kundli charts, predictions, and zodiac insights for apps, websites, ...",
+    "host_name": "astrobeans.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://astrowisdoms.com/api-documentation",
+    "name": "Astrology Chart API Documentation | AstroWisdoms API Guide",
+    "snippet": "Our API enables you to generate detailed Vedic astrology birth charts including planetary positions, nakshatras, dashas, and visual SVG chart representations.",
+    "host_name": "astrowisdoms.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

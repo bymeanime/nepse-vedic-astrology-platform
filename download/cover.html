@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEPSE Vedic Astrology Trading Platform</title>
+<style>
+  @page {
+    size: 794px 1123px;
+    margin: 0;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    width: 794px;
+    height: 1123px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Layer 1: Background grid */
+  .layer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 794px;
+    height: 1123px;
+    overflow: hidden;
+    z-index: 0;
+  }
+  .layer-bg svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Layer 2: Structure lines */
+  .layer-structure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 794px;
+    height: 1123px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .layer-structure svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Layer 3: Content */
+  .layer-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 794px;
+    height: 1123px;
+    z-index: 2;
+    box-sizing: border-box;
+    padding-left: 125.28pt; /* 0.12*794 + 30pt ≈ 95.28 + 30 = 125.28pt */
+  }
+
+  .kicker {
+    position: absolute;
+    top: 168.45pt; /* 0.15 * 1123 */
+    left: 0;
+    font-size: 16pt;
+    font-weight: 400;
+    letter-spacing: 3pt;
+    text-transform: uppercase;
+    color: #1d1e20;
+    opacity: 0.6;
+  }
+
+  .hero-title {
+    position: absolute;
+    top: 336.9pt; /* 0.30 * 1123 */
+    left: 0;
+    font-size: 48pt;
+    font-weight: 900;
+    line-height: 1.15;
+    color: #1d1e20;
+    max-width: 600pt;
+  }
+
+  .summary {
+    position: absolute;
+    top: 561.5pt; /* 0.50 * 1123 */
+    left: 0;
+    font-size: 16pt;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #1d1e20;
+    opacity: 0.85;
+    width: 476.4pt; /* 794 * 0.6 */
+  }
+
+  .meta {
+    position: absolute;
+    top: 842.25pt; /* 0.75 * 1123 */
+    left: 0;
+    font-size: 16pt;
+    font-weight: 400;
+    color: #1d1e20;
+  }
+
+  .meta .muted {
+    color: #7b8288;
+  }
+
+  .footer {
+    position: absolute;
+    top: 1033.16pt; /* 0.92 * 1123 */
+    left: 0;
+    font-size: 12pt;
+    font-weight: 400;
+    letter-spacing: 2pt;
+    text-transform: uppercase;
+    color: #1d1e20;
+    opacity: 0.6;
+  }
+</style>
+</head>
+<body>
+
+<!-- Layer 1: Background Grid -->
+<div class="layer-bg">
+  <svg xmlns="http://www.w3.org/2000/svg" width="794" height="1123">
+    <!-- Vertical lines every ~50pt -->
+    <line x1="50" y1="0" x2="50" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="100" y1="0" x2="100" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="150" y1="0" x2="150" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="200" y1="0" x2="200" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="250" y1="0" x2="250" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="300" y1="0" x2="300" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="350" y1="0" x2="350" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="400" y1="0" x2="400" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="450" y1="0" x2="450" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="500" y1="0" x2="500" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="550" y1="0" x2="550" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="600" y1="0" x2="600" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="650" y1="0" x2="650" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="700" y1="0" x2="700" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="750" y1="0" x2="750" y2="1123" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <!-- Horizontal lines every ~50pt -->
+    <line x1="0" y1="50" x2="794" y2="50" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="100" x2="794" y2="100" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="150" x2="794" y2="150" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="200" x2="794" y2="200" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="250" x2="794" y2="250" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="300" x2="794" y2="300" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="350" x2="794" y2="350" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="400" x2="794" y2="400" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="450" x2="794" y2="450" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="500" x2="794" y2="500" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="550" x2="794" y2="550" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="600" x2="794" y2="600" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="650" x2="794" y2="650" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="700" x2="794" y2="700" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="750" x2="794" y2="750" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="800" x2="794" y2="800" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="850" x2="794" y2="850" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="900" x2="794" y2="900" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="950" x2="794" y2="950" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="1000" x2="794" y2="1000" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="1050" x2="794" y2="1050" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+    <line x1="0" y1="1100" x2="794" y2="1100" stroke="#2c96b9" stroke-width="0.5" opacity="0.02"/>
+  </svg>
+</div>
+
+<!-- Layer 2: Structure lines -->
+<div class="layer-structure">
+  <svg xmlns="http://www.w3.org/2000/svg" width="794" height="1123">
+    <!-- Left anchor line: x=0.12*794=95.28, y from 0.1*1123=112.3 to 0.9*1123=1010.7 -->
+    <line x1="95.28" y1="112.3" x2="95.28" y2="1010.7" stroke="#2c96b9" stroke-width="6" stroke-linecap="round"/>
+    <!-- Meta separator line: at Y_meta - 10pt = 842.25 - 10 = 832.25, from X_content to X_content + W*0.4 -->
+    <!-- X_content = 125.28pt, width = 794*0.4 = 317.6pt -->
+    <line x1="125.28" y1="832.25" x2="442.88" y2="832.25" stroke="#2c96b9" stroke-width="1" opacity="0.4"/>
+  </svg>
+</div>
+
+<!-- Layer 3: Content -->
+<div class="layer-content">
+  <div class="kicker">WEBSITE ARCHITECTURE &amp; COMPETITIVE ANALYSIS</div>
+  <div class="hero-title">NEPSE VEDIC ASTROLOGY<br>TRADING PLATFORM</div>
+  <div class="summary">A comprehensive architecture blueprint combining Vedic astrological intelligence with real-time Nepal Stock Exchange data for predictive market analytics.</div>
+  <div class="meta">May 2026 <span class="muted">|</span> Confidential</div>
+  <div class="footer">PREPARED FOR STRATEGIC PLANNING</div>
+</div>
+
+</body>
+</html>

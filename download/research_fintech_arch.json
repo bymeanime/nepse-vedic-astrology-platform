@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://group107.com/blog/microservices-architecture-best-practices",
+    "name": "10 Essential Microservices Architecture Best Practices for 2025",
+    "snippet": "1. Single Responsibility Principle (SRP) – One Business Capability Per Service · 2. API-First Design and Contract-Driven Development · 3. Database ...",
+    "host_name": "group107.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://medium.com/@webelightsolutions/how-to-scale-a-fintech-mvp-with-future-proof-app-architecture-2025-guide-c401f4ddc052",
+    "name": "How to Scale a Fintech MVP with Future-Proof App Architecture",
+    "snippet": "We begin by designing a Minimum Viable Architecture (MVA) that focuses on core functionalities while ensuring scalability. This approach allows ...",
+    "host_name": "medium.com",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.thirstysprout.com/post/fintech-software-development",
+    "name": "A Practical Guide to Fintech Software Development (2025)",
+    "snippet": "Build a secure architecture: Use a microservices architecture for scalability and resilience. Isolate core functions like user management and ...",
+    "host_name": "www.thirstysprout.com",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.tntra.io/blog/scalable-fintech-platform-architecture-global-markets",
+    "name": "How to Build a Secure and Scalable FinTech Platform Architecture",
+    "snippet": "This article explains how to build secure and scalable fintech systems through strong architecture, payment infrastructure, AI integration, ...",
+    "host_name": "www.tntra.io",
+    "rank": 3,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://itcgroup.io/our-blogs/microservices-architecture-trends-best-practices-in-2025",
+    "name": "Microservices Architecture: Trends, Best Practices in 2025 - ITC Group",
+    "snippet": "Explore the top trends and best practices in Microservices Architecture in 2025, helping businesses enhance scalability & security.",
+    "host_name": "itcgroup.io",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://trio.dev/microservices-architecture-for-fintech",
+    "name": "Microservices Architecture for Fintech: Scalability in Financial Services",
+    "snippet": "Best Practices for Fintech Microservices Development. A successful microservices environment is built through deliberate design and ...",
+    "host_name": "trio.dev",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://anadea.info/blog/building-scalable-web-applications-2025",
+    "name": "Building Scalable Web Applications: Best Practices for 2025 - Anadea",
+    "snippet": "To build scalable web applications, microservices split the app into smaller services that handle specific tasks, like user accounts or payments ...",
+    "host_name": "anadea.info",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.zymr.com/blog/microservices-architecture-for-fintech",
+    "name": "Microservices Architecture for FinTech Applications - Zymr",
+    "snippet": "Independent Scaling: Microservices enable each service to scale independently based on demand. FinTech teams can increase capacity for high- ...",
+    "host_name": "www.zymr.com",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.talentica.com/blogs/fintech-software-development",
+    "name": "Fintech Software Development: A Complete Guide For 2025",
+    "snippet": "Fintech software development relies heavily on speed, security, and scalability, but these factors are also its biggest hurdles.",
+    "host_name": "www.talentica.com",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.webelight.com/blog/how-to-scale-a-fintech-mvp-with-future-proof-app-architecture-2025-guide",
+    "name": "Scalable Fintech MVP Architecture Guide, 2025 - webelight.com",
+    "snippet": "Learn how to scale your fintech MVP with microservices, AI readiness, and real-time architecture. Explore smart solutions used by Paytm & Razorpay.",
+    "host_name": "www.webelight.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]

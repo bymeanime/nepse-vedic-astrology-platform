@@ -1,0 +1,92 @@
+[
+  {
+    "url": "https://github.com/BalochLeader/NEPSE-API",
+    "name": "The Best NEPSE API by Diwas Khatri. Real-time Nepal Stock",
+    "snippet": "The Best NEPSE API by Diwas Khatri. Real-time Nepal Stock Exchange data, live prices, floorsheet, and indices. High-performance Python API ...",
+    "host_name": "github.com",
+    "rank": 0,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://pypi.org/project/nepse-api",
+    "name": "nepse-api - PyPI",
+    "snippet": "NEPSE API Wrapper. This python module fetches the data from Nepali Stock Site and provides them in a pythonic and usable way.",
+    "host_name": "pypi.org",
+    "rank": 1,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://nepse-api.readthedocs.io",
+    "name": "nepse-api 1.1.10 documentation",
+    "snippet": "Welcome to nepse-api's documentation! nepse-api is a mordern, easy to use, feature-rich and async ready API wrapper for NEPSE.",
+    "host_name": "nepse-api.readthedocs.io",
+    "rank": 2,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.reddit.com/r/technepal/comments/1tavq04/nepali_market_apis_data_feeds_kata_paiyela",
+    "name": "Nepali market APIs data feeds kata paiyela? : r/technepal - Reddit",
+    "snippet": "Anyone here working with Nepal market APIs/data feeds? I'm looking for reliable APIs or data sources for: Forex rates (NRB / live exchange ...",
+    "host_name": "www.reddit.com",
+    "rank": 3,
+    "date": "May 12, 2026",
+    "favicon": ""
+  },
+  {
+    "url": "https://data.smartwealthpro.com/features",
+    "name": "NEPSE API Features | Real-Time & Historical Market Data | MDP",
+    "snippet": "Explore NEPSE API features including real-time stock data, historical market data, indices, secure REST APIs, and scalable solutions for fintech platforms.",
+    "host_name": "data.smartwealthpro.com",
+    "rank": 4,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://github.com/surajrimal07/NepseAPI-Unofficial",
+    "name": "surajrimal07/NepseAPI-Unofficial: Unlock Nepal Stock  - GitHub",
+    "snippet": "An unofficial API service for Nepal Stock Exchange (NEPSE) that provides real-time market data through REST, WebSocket, and Model Context Protocol (MCP) ...",
+    "host_name": "github.com",
+    "rank": 5,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facebook.com/groups/itsnporg/posts/920859555362142",
+    "name": "Creating a Python Module for Nepal Stock Exchange API - Facebook",
+    "snippet": "Nepse real-time data API or JavaScript scraping technique? Sahadev ... Free or low-cost API for real-time stock market data. Jérémie ...",
+    "host_name": "www.facebook.com",
+    "rank": 6,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.researchgate.net/publication/402014112_NEPSE_STOCK_INDEX_PREDICTION_USING_LSTM_A_Deep_Learning_Approach_Utilizing_Recurrent_Neural_Networks",
+    "name": "(PDF) NEPSE STOCK INDEX PREDICTION USING LSTM: A Deep",
+    "snippet": "Objective: To develop an innovative stock price prediction platform based on deep learning, using the LSTM algorithm to forecast movements in ...",
+    "host_name": "www.researchgate.net",
+    "rank": 7,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://nepsetty.kokomo.workers.dev",
+    "name": "ShareBazaar - NEPSE Stock Data API",
+    "snippet": "Real-time stock data directly from NEPSE · Simple API with minimal complexity · No authentication or API keys required · Free to use for personal and commercial ...",
+    "host_name": "nepsetty.kokomo.workers.dev",
+    "rank": 8,
+    "date": "",
+    "favicon": ""
+  },
+  {
+    "url": "https://www.facebook.com/sourcecode.com.np/videos/looking-to-integrate-real-time-nepse-market-data-into-your-platformmarket-data-p/767966009655148",
+    "name": "Looking to integrate real-time NEPSE market data into your platform",
+    "snippet": "Do you want real-time NEPSE data on your website or app? Meet Market Data Provider MDP by source code. From NEPSE data to a complete ...",
+    "host_name": "www.facebook.com",
+    "rank": 9,
+    "date": "",
+    "favicon": ""
+  }
+]
