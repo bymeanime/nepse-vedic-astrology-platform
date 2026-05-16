@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useMemo } from 'react'
 
 interface StockPrice {
   close: number
@@ -15,10 +15,8 @@ interface MiniChartProps {
 }
 
 export function MiniChart({ prices, width = 80, height = 32, positive }: MiniChartProps) {
-  const [points, setPoints] = useState<string>('')
-
-  useEffect(() => {
-    if (!prices || prices.length < 2) return
+  const points = useMemo(() => {
+    if (!prices || prices.length < 2) return ''
 
     const sortedPrices = [...prices].sort(
       (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime()
@@ -38,7 +36,7 @@ export function MiniChart({ prices, width = 80, height = 32, positive }: MiniCha
       return `${x},${y}`
     })
 
-    setPoints(pts.join(' '))
+    return pts.join(' ')
   }, [prices, width, height])
 
   const color = positive !== undefined
@@ -55,6 +53,8 @@ export function MiniChart({ prices, width = 80, height = 32, positive }: MiniCha
     )
   }
 
+  const lastPoint = points.split(' ').pop()?.split(',')
+
   return (
     <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`}>
       <defs>
@@ -63,12 +63,10 @@ export function MiniChart({ prices, width = 80, height = 32, positive }: MiniCha
           <stop offset="100%" stopColor={color} stopOpacity="0" />
         </linearGradient>
       </defs>
-      {points && (
-        <polygon
-          points={`0,${height} ${points} ${width},${height}`}
-          fill={`url(#grad-${positive ? 'up' : 'down'})`}
-        />
-      )}
+      <polygon
+        points={`0,${height} ${points} ${width},${height}`}
+        fill={`url(#grad-${positive ? 'up' : 'down'})`}
+      />
       <polyline
         points={points}
         fill="none"
@@ -78,8 +76,8 @@ export function MiniChart({ prices, width = 80, height = 32, positive }: MiniCha
         strokeLinejoin="round"
       />
       <circle
-        cx={points.split(' ').pop()?.split(',')[0]}
-        cy={points.split(' ').pop()?.split(',')[1]}
+        cx={lastPoint?.[0]}
+        cy={lastPoint?.[1]}
         r="2"
         fill={color}
       />

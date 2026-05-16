@@ -29,7 +29,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { Image, Search, Upload, Trash2, Eye, FileImage, Download } from 'lucide-react'
+import { ImageIcon, Search, Upload, Trash2, Eye, FileImage, Download } from 'lucide-react'
 import { toast } from 'sonner'
 
 interface MediaItem {
@@ -152,7 +152,7 @@ export function CmsMediaPage() {
       <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div>
           <h2 className="text-2xl font-bold text-foreground flex items-center gap-2">
-            <Image className="h-6 w-6 text-amber-600" />
+            <ImageIcon className="h-6 w-6 text-amber-600" />
             Media Library
           </h2>
           <p className="text-sm text-muted-foreground mt-1">
@@ -305,7 +305,7 @@ export function CmsMediaPage() {
               ))}
               {filteredMedia.length === 0 && (
                 <div className="col-span-full text-center py-12 text-muted-foreground">
-                  <Image className="h-12 w-12 mx-auto mb-3 opacity-30" />
+                  <ImageIcon className="h-12 w-12 mx-auto mb-3 opacity-30" />
                   <p className="text-sm">
                     {media.length === 0
                       ? 'No files uploaded yet. Upload your first file to get started.'
