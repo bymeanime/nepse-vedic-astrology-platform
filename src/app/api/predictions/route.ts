@@ -1,7 +1,7 @@
 // ============================================
 // NEPSE Vedic Astrology Trading Platform
 // Market Predictions API - List & Create
-// GET  /api/predictions  - List predictions
+// GET  /api/predictions  - List predictions (future by default)
 // POST /api/predictions  - Create prediction (editor+ only)
 // ============================================
 
@@ -16,32 +16,36 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
     const typeFilter = searchParams.get('type') as PredictionType | null
     const dateFilter = searchParams.get('date')
+    const showAll = searchParams.get('all') === 'true'
 
     const where: Record<string, unknown> = {}
     if (typeFilter) where.predictionType = typeFilter
     if (dateFilter) {
-      // Filter by target date (start of day to end of day)
       const startOfDay = new Date(dateFilter)
       startOfDay.setUTCHours(0, 0, 0, 0)
       const endOfDay = new Date(dateFilter)
       endOfDay.setUTCHours(23, 59, 59, 999)
-      where.targetDate = {
-        gte: startOfDay,
-        lte: endOfDay,
-      }
+      where.targetDate = { gte: startOfDay, lte: endOfDay }
+    }
+
+    // By default, only show future predictions (targetDate >= today)
+    if (!showAll && !dateFilter) {
+      const today = new Date()
+      today.setUTCHours(0, 0, 0, 0)
+      where.targetDate = { gte: today }
     }
 
     const predictions = await db.marketPrediction.findMany({
       where,
       include: {
         vedicEvent: {
-          select: { id: true, name: true, eventType: true },
+          select: { id: true, name: true, eventType: true, marketImpact: true },
         },
         stock: {
           select: { id: true, symbol: true, name: true },
         },
       },
-      orderBy: { createdAt: 'desc' },
+      orderBy: { targetDate: 'asc' },
     })
 
     return success(predictions)

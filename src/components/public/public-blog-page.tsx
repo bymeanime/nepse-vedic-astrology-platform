@@ -23,7 +23,7 @@ export function PublicBlogPage() {
     async function load() {
       try {
         const res = await fetch('/api/blog')
-        if (res.ok) { const data = await res.json(); setPosts((data.data ?? []).filter((p: BlogPost) => p.status === 'PUBLISHED')) }
+        if (res.ok) { const data = await res.json(); setPosts(data.data ?? []) }
       } catch { /* Silent */ } finally { setLoading(false) }
     }
     load()

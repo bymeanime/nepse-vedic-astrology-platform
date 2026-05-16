@@ -116,8 +116,8 @@ export function PredictionsPage() {
   async function loadData() {
     try {
       const [predRes, vedicRes] = await Promise.allSettled([
-        fetch('/api/predictions'),
-        fetch('/api/vedic-events'),
+        fetch('/api/predictions?all=true'),
+        fetch('/api/vedic-events?all=true'),
       ])
 
       if (predRes.status === 'fulfilled' && predRes.value.ok) {

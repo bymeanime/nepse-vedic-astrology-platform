@@ -1,7 +1,7 @@
 // ============================================
 // NEPSE Vedic Astrology Trading Platform
 // Vedic Events API - List & Create
-// GET  /api/vedic-events  - List all vedic events
+// GET  /api/vedic-events  - List vedic events (current/upcoming by default)
 // POST /api/vedic-events  - Create vedic event (editor+ only)
 // ============================================
 
@@ -16,14 +16,26 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
     const typeFilter = searchParams.get('type') as VedicEventType | null
     const impactFilter = searchParams.get('impact') as MarketImpact | null
+    const showAll = searchParams.get('all') === 'true'
 
     const where: Record<string, unknown> = {}
+
     if (typeFilter) where.eventType = typeFilter
     if (impactFilter) where.marketImpact = impactFilter
 
+    // By default, only show current and upcoming events (not past events)
+    // An event is "current/upcoming" if its endDate >= today OR startDate >= today
+    if (!showAll) {
+      const now = new Date()
+      where.OR = [
+        { endDate: { gte: now } },
+        { endDate: null, startDate: { gte: now } },
+      ]
+    }
+
     const events = await db.vedicEvent.findMany({
       where,
-      orderBy: { startDate: 'desc' },
+      orderBy: { startDate: 'asc' },
     })
 
     return success(events)

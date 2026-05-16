@@ -109,7 +109,7 @@ export function CmsBlogPage() {
   async function loadData() {
     try {
       const [blogRes, catRes] = await Promise.allSettled([
-        fetch('/api/blog'),
+        fetch('/api/blog?all=true'),
         fetch('/api/categories'),
       ])
 

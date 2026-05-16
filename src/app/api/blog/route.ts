@@ -1,7 +1,7 @@
 // ============================================
 // NEPSE Vedic Astrology Trading Platform
 // Blog Posts API - List & Create
-// GET  /api/blog         - List all blog posts
+// GET  /api/blog         - List blog posts (published only by default; ?all=true for admin)
 // POST /api/blog         - Create a new blog post
 // ============================================
 
@@ -16,8 +16,11 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
     const statusFilter = searchParams.get('status') as ContentStatus | null
     const categoryIdFilter = searchParams.get('categoryId')
+    const showAll = searchParams.get('all') === 'true'
 
     const where: Record<string, unknown> = {}
+    // By default, only show published posts to the public
+    if (!showAll && !statusFilter) where.status = 'PUBLISHED'
     if (statusFilter) where.status = statusFilter
     if (categoryIdFilter) where.categoryId = categoryIdFilter
 

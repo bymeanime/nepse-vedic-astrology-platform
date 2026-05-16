@@ -42,9 +42,9 @@ export function DashboardPage() {
       try {
         const [usersRes, blogRes, predictionsRes, vedicRes, logsRes] = await Promise.allSettled([
           fetch('/api/users'),
-          fetch('/api/blog'),
-          fetch('/api/predictions'),
-          fetch('/api/vedic-events'),
+          fetch('/api/blog?all=true'),
+          fetch('/api/predictions?all=true'),
+          fetch('/api/vedic-events?all=true'),
           fetch('/api/activity-log?limit=10'),
         ])
 

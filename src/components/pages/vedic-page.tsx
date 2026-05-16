@@ -103,7 +103,7 @@ export function VedicPage() {
 
   async function loadEvents() {
     try {
-      const res = await fetch('/api/vedic-events')
+      const res = await fetch('/api/vedic-events?all=true')
       if (res.ok) {
         const data = await res.json()
         setEvents(data.data ?? [])
