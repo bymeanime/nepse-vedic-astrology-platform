@@ -1,0 +1,281 @@
+// NEPSE Vedic Astrology Trading Platform - Unified Schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// ============================================
+// User & Auth
+// ============================================
+
+model User {
+  id         String   @id @default(cuid())
+  email      String   @unique
+  name       String?
+  password   String?
+  role       String   @default("VIEWER") // ADMIN, EDITOR, VIEWER
+  avatar     String?
+  phone      String?
+  birthDate  DateTime?
+  birthTime  String?
+  birthPlace String?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  pages         Page[]
+  blogPosts     BlogPost[]
+  media         Media[]
+  sessions      Session[]
+  watchlists    Watchlist[]
+  activityLogs  ActivityLog[]
+
+  @@index([role])
+  @@index([email])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  createdAt    DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([sessionToken])
+}
+
+// ============================================
+// CMS - Content Management
+// ============================================
+
+model Page {
+  id             String   @id @default(cuid())
+  slug           String   @unique
+  title          String
+  content        String   @default("")
+  metaTitle      String?
+  metaDescription String?
+  status         String   @default("DRAFT") // DRAFT, PUBLISHED, ARCHIVED
+  authorId       String
+  featuredImage  String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  author User @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  @@index([slug])
+  @@index([status])
+  @@index([authorId])
+}
+
+model BlogPost {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  title         String
+  excerpt       String   @default("")
+  content       String   @default("")
+  status        String   @default("DRAFT") // DRAFT, PUBLISHED, ARCHIVED
+  categoryId    String?
+  authorId      String
+  featuredImage String?
+  viewCount     Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  author   User          @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  category BlogCategory? @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+
+  @@index([slug])
+  @@index([status])
+  @@index([categoryId])
+  @@index([authorId])
+  @@index([createdAt])
+}
+
+model BlogCategory {
+  id          String @id @default(cuid())
+  name        String
+  slug        String @unique
+  description String?
+
+  blogPosts BlogPost[]
+
+  @@index([slug])
+}
+
+model Media {
+  id           String   @id @default(cuid())
+  filename     String
+  originalName String
+  mimeType     String
+  size         Int
+  url          String
+  alt          String?
+  uploadedBy   String
+  createdAt    DateTime @default(now())
+
+  uploader User @relation(fields: [uploadedBy], references: [id], onDelete: Cascade)
+
+  @@index([uploadedBy])
+  @@index([mimeType])
+}
+
+// ============================================
+// Market Data
+// ============================================
+
+model MarketIndex {
+  id           String   @id @default(cuid())
+  name         String   // NEPSE, Sensitive, Float
+  value        Float
+  change       Float    @default(0)
+  changePercent Float   @default(0)
+  volume       Float    @default(0)
+  date         DateTime @default(now())
+
+  @@index([name])
+  @@index([date])
+}
+
+model Stock {
+  id          String  @id @default(cuid())
+  symbol      String  @unique
+  name        String
+  sector      String?
+  description String?
+  isActive    Boolean @default(true)
+
+  prices      StockPrice[]
+  watchlistItems WatchlistItem[]
+  predictions MarketPrediction[]
+
+  @@index([symbol])
+  @@index([sector])
+  @@index([isActive])
+}
+
+model StockPrice {
+  id      String   @id @default(cuid())
+  stockId String
+  open    Float
+  high    Float
+  low     Float
+  close   Float
+  volume  Float    @default(0)
+  date    DateTime @default(now())
+
+  stock Stock @relation(fields: [stockId], references: [id], onDelete: Cascade)
+
+  @@index([stockId])
+  @@index([date])
+  @@unique([stockId, date])
+}
+
+model Watchlist {
+  id        String   @id @default(cuid())
+  userId    String
+  name      String
+  createdAt DateTime @default(now())
+
+  user  User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  items WatchlistItem[]
+
+  @@index([userId])
+}
+
+model WatchlistItem {
+  id         String @id @default(cuid())
+  watchlistId String
+  stockId    String
+
+  watchlist Watchlist @relation(fields: [watchlistId], references: [id], onDelete: Cascade)
+  stock     Stock     @relation(fields: [stockId], references: [id], onDelete: Cascade)
+
+  @@unique([watchlistId, stockId])
+  @@index([watchlistId])
+  @@index([stockId])
+}
+
+// ============================================
+// Vedic / Astrology
+// ============================================
+
+model VedicEvent {
+  id            String   @id @default(cuid())
+  name          String
+  eventType     String   // ECLIPSE, RETROGRADE, TRANSIT, CONJUNCTION
+  planet        String?
+  startDate     DateTime
+  endDate       DateTime?
+  description   String?
+  marketImpact  String   @default("NEUTRAL") // BULLISH, BEARISH, NEUTRAL
+  impactStrength String  @default("MEDIUM")  // LOW, MEDIUM, HIGH
+  createdAt     DateTime @default(now())
+
+  predictions MarketPrediction[]
+
+  @@index([eventType])
+  @@index([planet])
+  @@index([startDate])
+  @@index([marketImpact])
+}
+
+model MarketPrediction {
+  id             String   @id @default(cuid())
+  vedicEventId   String
+  stockId        String?
+  predictionType String   // DAILY, WEEKLY, MONTHLY
+  prediction     String   // BULLISH, BEARISH, NEUTRAL
+  confidence     Int      @default(50) // 0-100
+  reasoning      String?
+  targetDate     DateTime
+  actualOutcome  String?  // BULLISH, BEARISH, NEUTRAL
+  createdAt      DateTime @default(now())
+
+  vedicEvent VedicEvent @relation(fields: [vedicEventId], references: [id], onDelete: Cascade)
+  stock      Stock?     @relation(fields: [stockId], references: [id], onDelete: SetNull)
+
+  @@index([vedicEventId])
+  @@index([stockId])
+  @@index([predictionType])
+  @@index([targetDate])
+}
+
+// ============================================
+// Admin / System
+// ============================================
+
+model SiteSettings {
+  id          String   @id @default(cuid())
+  key         String   @unique
+  value       String
+  type        String   @default("STRING") // STRING, NUMBER, JSON, BOOLEAN
+  group       String?
+  description String?
+  updatedAt   DateTime @updatedAt
+
+  @@index([group])
+  @@index([key])
+}
+
+model ActivityLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  action    String
+  details   String?
+  ipAddress String?
+  createdAt DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([userId])
+  @@index([action])
+  @@index([createdAt])
+}
