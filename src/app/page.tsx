@@ -7,9 +7,11 @@ import { DashboardPage } from '@/components/pages/dashboard-page'
 import { MarketPage } from '@/components/pages/market-page'
 import { VedicPage } from '@/components/pages/vedic-page'
 import { PredictionsPage } from '@/components/pages/predictions-page'
+import { WatchlistPage } from '@/components/pages/watchlist-page'
 import { CmsPagesPage } from '@/components/pages/cms-pages-page'
 import { CmsBlogPage } from '@/components/pages/cms-blog-page'
 import { CmsCategoriesPage } from '@/components/pages/cms-categories-page'
+import { CmsMediaPage } from '@/components/pages/cms-media-page'
 import { AdminUsersPage } from '@/components/pages/admin-users-page'
 import { AdminSettingsPage } from '@/components/pages/admin-settings-page'
 import { AdminLogsPage } from '@/components/pages/admin-logs-page'
@@ -27,12 +29,16 @@ export default function Home() {
         return <VedicPage />
       case 'predictions':
         return <PredictionsPage />
+      case 'watchlist':
+        return <WatchlistPage />
       case 'cms-pages':
         return <CmsPagesPage />
       case 'cms-blog':
         return <CmsBlogPage />
       case 'cms-categories':
         return <CmsCategoriesPage />
+      case 'cms-media':
+        return <CmsMediaPage />
       case 'admin-users':
         return <AdminUsersPage />
       case 'admin-settings':

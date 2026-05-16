@@ -5,9 +5,11 @@ export type Page =
   | 'market'
   | 'vedic'
   | 'predictions'
+  | 'watchlist'
   | 'cms-pages'
   | 'cms-blog'
   | 'cms-categories'
+  | 'cms-media'
   | 'admin-users'
   | 'admin-settings'
   | 'admin-logs'
@@ -23,9 +25,11 @@ export const PAGE_CONFIGS: PageConfig[] = [
   { key: 'market', label: 'Market', group: 'main' },
   { key: 'vedic', label: 'Vedic Charts', group: 'main' },
   { key: 'predictions', label: 'Predictions', group: 'main' },
+  { key: 'watchlist', label: 'Watchlist', group: 'main' },
   { key: 'cms-pages', label: 'Pages', group: 'cms' },
   { key: 'cms-blog', label: 'Blog', group: 'cms' },
   { key: 'cms-categories', label: 'Categories', group: 'cms' },
+  { key: 'cms-media', label: 'Media', group: 'cms' },
   { key: 'admin-users', label: 'Users', group: 'admin' },
   { key: 'admin-settings', label: 'Settings', group: 'admin' },
   { key: 'admin-logs', label: 'Activity Logs', group: 'admin' },

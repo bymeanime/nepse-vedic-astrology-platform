@@ -14,6 +14,7 @@ import {
   TableRow,
 } from '@/components/ui/table'
 import { TrendingUp, TrendingDown, Search, BarChart3 } from 'lucide-react'
+import { MiniChart } from '@/components/charts/mini-chart'
 
 interface MarketIndex {
   id: string
